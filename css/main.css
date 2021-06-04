@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-image: url("../images/");
+  transition: background-color 0.2s linear;
+}
+
+main {
+  width: 90%;
+  margin-top: 2rem;
+  font-family: Inter;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+.header .title-container {
+  border-bottom: 1px solid #929292;
+  padding-bottom: 1rem;
+}
+.header .dark-mode {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #929292;
+  transition: color 0.2s linear;
+}
+.header .title {
+  font-size: 1.2rem;
+  margin-bottom: 0.1rem;
+}
+.header .subtitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #929292;
+  transition: color 0.2s linear;
+}
+.header .toggle-container {
+  margin-top: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .toggle-container .toggle {
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+  background-color: #929292;
+  transition: background-color 0.2s linear;
+  position: relative;
+  background-image: linear-gradient(90deg, #378fe6, #3eda82);
+  border-radius: 12px;
+}
+.header .toggle-container .toggle input[type=checkbox] {
+  appearance: none;
+}
+.header .toggle-container .toggle input[type=checkbox]:checked + span {
+  transform: translate(23px);
+  background-color: white;
+}
+.header .toggle-container .toggle span {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transform: translateX(3px);
+  transition: transform 0.2s linear;
+  position: absolute;
+  margin: auto;
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #252a41;
+}
+.header .toggle-container .toggle.change {
+  background-color: #aeb3cb;
+  background-image: none;
+}
+
+.followers {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.5rem;
+  width: 100%;
+  gap: 1rem;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.followers .box {
+  padding: 1.8rem 0 1.2rem;
+  background-color: #f0f2fa;
+  transition: background-color 0.2s linear;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 280px;
+}
+.followers .box::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: 0;
+}
+.followers .box .icon-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.followers .box .tag {
+  font-family: Inter;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #63687e;
+  transition: color 0.2s linear;
+}
+.followers .box .followers-count {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.followers .box .num {
+  font-size: 3rem;
+}
+.followers .box .caption {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 4px;
+  font-size: 0.7rem;
+  color: #63687e;
+  transition: color 0.2s linear;
+}
+.followers .box .upcount {
+  display: flex;
+  align-items: center;
+  color: #1db489;
+  font-size: 0.75rem;
+  gap: 2px;
+  font-weight: 700;
+}
+.followers .box.fb::before {
+  background-color: #198ff5;
+}
+.followers .box.twitter::before {
+  background-color: #1ca0f2;
+}
+.followers .box.insta::before {
+  background-image: linear-gradient(90deg, #fdc468, #df4996);
+}
+.followers .box.yt::before {
+  background-color: #c4032a;
+}
+.followers .box.yt .upcount {
+  color: #dc414c;
+}
+
+.overview {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.overview .heading {
+  font-weight: 700;
+  color: #63687e;
+  transition: color 0.2s linear;
+  margin-bottom: 1.4rem;
+}
+.overview .overview-stats {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.overview .box {
+  width: 100%;
+  max-width: 280px;
+  padding: 1.2rem 1rem 1rem;
+  background-color: #f0f2fa;
+  transition: background-color 0.2s linear;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  gap: 1rem;
+}
+.overview .box:nth-child(1) span {
+  color: #1db489;
+}
+.overview .box:nth-child(2) span {
+  color: #dc414c;
+}
+.overview .box:nth-child(3) span {
+  color: #1db489;
+}
+.overview .box:nth-child(4) span {
+  color: #1db489;
+}
+.overview .box:nth-child(5) span {
+  color: #1db489;
+}
+.overview .box:nth-child(6) span {
+  color: #1db489;
+}
+.overview .box:nth-child(7) span {
+  color: #dc414c;
+}
+.overview .box:nth-child(8) span {
+  color: #dc414c;
+}
+.overview .box .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.overview .box .title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #63687e;
+  transition: color 0.2s linear;
+}
+.overview .box .title + img {
+  width: 18px;
+}
+.overview .box .count {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.overview .box span {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 650px) {
+  main {
+    max-width: 1250px;
+  }
+
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .header .title-container {
+    border-bottom: none;
+    padding: 0;
+  }
+  .header .title {
+    font-size: 1.4rem;
+    margin-bottom: 0.2rem;
+  }
+  .header .toggle-container {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+  }
+}
+body.dark {
+  background-color: #1e202a;
+  transition: background-color 0.2s linear;
+}
+body.dark .title,
+body.dark .num,
+body.dark .count {
+  color: white;
+  transition: color 0.2s linear;
+}
+body.dark .subtitle,
+body.dark .dark-mode,
+body.dark .tag,
+body.dark .caption,
+body.dark .heading {
+  color: #8b97c6;
+  transition: color 0.2s linear;
+}
+body.dark .box {
+  background-color: #252a41;
+  transition: background-color 0.2s linear;
+}/*# sourceMappingURL=main.css.map */
